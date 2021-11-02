@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---link icon-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!---link bootstrap-->
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <!--link awesomme-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>website bán sen đá</title>
+    <style>
+      .card {
+        padding: 30px 40px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        border: none !important;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .blue-text {
+        color: #00bcd4;
+      }
+
+      .form-control-label {
+        margin-bottom: 0;
+      }
+
+      input,
+      textarea,
+      button {
+        padding: 8px 15px;
+        border-radius: 5px !important;
+        margin: 5px 0px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        font-size: 18px !important;
+        font-weight: 300;
+      }
+
+      input:focus,
+      textarea:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid #00bcd4;
+        outline-width: 0;
+        font-weight: 400;
+      }
+
+      .btn-block {
+        text-transform: uppercase;
+        font-size: 15px !important;
+        font-weight: 400;
+        height: 43px;
+        cursor: pointer;
+      }
+
+      .btn-block:hover {
+        color: #fff !important;
+      }
+
+      button:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        outline-width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-top-->
+    <div class="pre-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-sm-8 col-7">
+            <ul class="info">
+              <li>
+                <a href="#"><i class="fa fa-envelope"></i>nhu@gmail.com</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-phone"></i>08 682 48101</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-5">
+            <ul class="social-media">
+              <li>
+                <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end-->
+    <!--header-->
+    <div class="header-1">
+      <a href="#" class="logo_top">
+        <img src="hinhanh/logo.jpg" height="50px !important" />
+      </a>
+      <form action="" class="search-box-container">
+        <input
+          type="search"
+          id="search-box"
+          placeholder="Nhập từ khóa cần tìm..."
+        />
+        <button class="btn_search"><i class="bx bx-search"></i></button>
+      </form>
+    </div>
+    <!--end-->
+    <header class="header">
+      <a href="#" class="header__logo">Sen đá</a>
+      <i class="bx bx-menu header__toggle" id="header-toggle"></i>
+      <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link active">Trang Chủ</a>
+              </li>
+
+              <li class="nav__item dropdown">
+                <a href="#" class="nav__link dropdown__link"
+                  >Sản Phẩm <i class="bx bx-chevron-down dropdown__icon"></i
+                ></a>
+
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link"></a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">Sen đá</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">Sen đá</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">Sen đá</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">Chăm sóc</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">Liên Hệ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="icon_menu">
+            <i class="bx bx-shopping-bag"></i>
+            <div class="drop_a">
+              <a
+                href="#"
+                class="a_drop"
+                style="text-decoration: none"
+                data-toggle="modal"
+                data-target="#exampleModalCenter"
+              >
+                <i class="bx bx-user"></i
+              ></a>
+              <div class="dropdown-login">
+                <button
+                  class="btn_drop"
+                  data-toggle="modal"
+                  data-target="#exampleModalCenter"
+                >
+                  Đăng Nhập
+                </button>
+                <button
+                  class="btn_drop1"
+                  data-toggle="modal"
+                  data-target="#exampleModalCenter1"
+                >
+                  Đăng Ký
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--noi dung-->
+    <div class="container-fluid px-1 py-5 mx-auto">
+      <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+          <h3>Request a Demo</h3>
+          <p class="blue-text">
+            Just answer a few questions<br />
+            so that we can personalize the right experience for you.
+          </p>
+          <div class="card">
+            <h5 class="text-center mb-4">Powering world-class companies</h5>
+            <form class="form-card" onsubmit="event.preventDefault()">
+              <div class="row justify-content-between text-left">
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >First name<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="Enter your first name"
+                    onblur="validate(1)"
+                  />
+                </div>
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >Last name<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    placeholder="Enter your last name"
+                    onblur="validate(2)"
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-between text-left">
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >Business email<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder=""
+                    onblur="validate(3)"
+                  />
+                </div>
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >Phone number<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="text"
+                    id="mob"
+                    name="mob"
+                    placeholder=""
+                    onblur="validate(4)"
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-between text-left">
+                <div class="form-group col-sm-6 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >Job title<span class="text-danger"> *</span></label
+                  >
+                  <input
+                    type="text"
+                    id="job"
+                    name="job"
+                    placeholder=""
+                    onblur="validate(5)"
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-between text-left">
+                <div class="form-group col-12 flex-column d-flex">
+                  <label class="form-control-label px-3"
+                    >What would you be using Flinks for?<span
+                      class="text-danger"
+                    >
+                      *</span
+                    ></label
+                  >
+                  <input
+                    type="text"
+                    id="ans"
+                    name="ans"
+                    placeholder=""
+                    onblur="validate(6)"
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-end">
+                <div class="form-group col-sm-6">
+                  <button type="submit" class="btn-block btn-primary">
+                    Request a demo
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <select name="calc_shipping_provinces" required="" style="background-color: red;">
+      <option value="">Tỉnh / Thành phố</option>
+    </select> -->
+    <input class="billing_address_1" name="" type="hidden" value="" />
+    <!---backtotop-->
+    <div class="back-to-top">
+      <i class="bx bxs-up-arrow"></i>
+    </div>
+
+    <!--===== MAIN JS =====-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!--link bootstrap-->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+    <script type="text/javascript">
+      function validate(val) {
+        v1 = document.getElementById("fname");
+        v2 = document.getElementById("lname");
+        v3 = document.getElementById("email");
+        v4 = document.getElementById("mob");
+        v5 = document.getElementById("job");
+        v6 = document.getElementById("ans");
+
+        flag1 = true;
+        flag2 = true;
+        flag3 = true;
+        flag4 = true;
+        flag5 = true;
+        flag6 = true;
+
+        if (val >= 1 || val == 0) {
+          if (v1.value == "") {
+            v1.style.borderColor = "red";
+            flag1 = false;
+          } else {
+            v1.style.borderColor = "green";
+            flag1 = true;
+          }
+        }
+
+        if (val >= 2 || val == 0) {
+          if (v2.value == "") {
+            v2.style.borderColor = "red";
+            flag2 = false;
+          } else {
+            v2.style.borderColor = "green";
+            flag2 = true;
+          }
+        }
+        if (val >= 3 || val == 0) {
+          if (v3.value == "") {
+            v3.style.borderColor = "red";
+            flag3 = false;
+          } else {
+            v3.style.borderColor = "green";
+            flag3 = true;
+          }
+        }
+        if (val >= 4 || val == 0) {
+          if (v4.value == "") {
+            v4.style.borderColor = "red";
+            flag4 = false;
+          } else {
+            v4.style.borderColor = "green";
+            flag4 = true;
+          }
+        }
+        if (val >= 5 || val == 0) {
+          if (v5.value == "") {
+            v5.style.borderColor = "red";
+            flag5 = false;
+          } else {
+            v5.style.borderColor = "green";
+            flag5 = true;
+          }
+        }
+        if (val >= 6 || val == 0) {
+          if (v6.value == "") {
+            v6.style.borderColor = "red";
+            flag6 = false;
+          } else {
+            v6.style.borderColor = "green";
+            flag6 = true;
+          }
+        }
+
+        flag = flag1 && flag2 && flag3 && flag4 && flag5 && flag6;
+
+        return flag;
+      }
+    </script>
+    <!-- <script>//<![CDATA[
+          if (address_2 = localStorage.getItem('address_2_saved')) {
+            $('select[name="calc_shipping_district"] option').each(function() {
+              if ($(this).text() == address_2) {
+                $(this).attr('selected', '')
+              }
+            })
+            $('input.billing_address_2').attr('value', address_2)
+          }
+          if (district = localStorage.getItem('district')) {
+            $('select[name="calc_shipping_district"]').html(district)
+            $('select[name="calc_shipping_district"]').on('change', function() {
+              var target = $(this).children('option:selected')
+              target.attr('selected', '')
+              $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+              address_2 = target.text()
+              $('input.billing_address_2').attr('value', address_2)
+              district = $('select[name="calc_shipping_district"]').html()
+              localStorage.setItem('district', district)
+              localStorage.setItem('address_2_saved', address_2)
+            })
+          }
+          $('select[name="calc_shipping_provinces"]').each(function() {
+            var $this = $(this),
+              stc = ''
+            c.forEach(function(i, e) {
+              e += +1
+              stc += '<option value=' + e + '>' + i + '</option>'
+              $this.html('<option value="">Tỉnh / Thành phố</option>' + stc)
+              if (address_1 = localStorage.getItem('address_1_saved')) {
+                $('select[name="calc_shipping_provinces"] option').each(function() {
+                  if ($(this).text() == address_1) {
+                    $(this).attr('selected', '')
+                  }
+                })
+                $('input.billing_address_1').attr('value', address_1)
+              }
+              $this.on('change', function(i) {
+                i = $this.children('option:selected').index() - 1
+                var str = '',
+                  r = $this.val()
+                if (r != '') {
+                  arr[i].forEach(function(el) {
+                    str += '<option value="' + el + '">' + el + '</option>'
+                    $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>' + str)
+                  })
+                  var address_1 = $this.children('option:selected').text()
+                  var district = $('select[name="calc_shipping_district"]').html()
+                  localStorage.setItem('address_1_saved', address_1)
+                  localStorage.setItem('district', district)
+                  $('select[name="calc_shipping_district"]').on('change', function() {
+                    var target = $(this).children('option:selected')
+                    target.attr('selected', '')
+                    $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+                    var address_2 = target.text()
+                    $('input.billing_address_2').attr('value', address_2)
+                    district = $('select[name="calc_shipping_district"]').html()
+                    localStorage.setItem('district', district)
+                    localStorage.setItem('address_2_saved', address_2)
+                  })
+                } else {
+                  $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>')
+                  district = $('select[name="calc_shipping_district"]').html()
+                  localStorage.setItem('district', district)
+                  localStorage.removeItem('address_1_saved', address_1)
+                }
+              })
+            })
+          })
+          //]]></script> -->
+  </body>
+</html>

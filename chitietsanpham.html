@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!---link bootstrap-->
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <title>Chi tiết sản phẩm</title>
+    <style>
+        .card-wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.card-wrapper img{
+    width: 100%;
+    display: block;
+}
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item img{
+  border-radius: 8px;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #12263a;
+}
+.product-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.product-link:hover{
+    opacity: 0.9;
+}
+.product-rating{
+    color: #ffc107;
+}
+.product-rating span{
+    font-weight: 600;
+    color: #252525;
+}
+.product-price{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.product-price span{
+    font-weight: 400;
+}
+.last-price span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price span{
+    color: #256eff;
+}
+.product-detail h2{
+    text-transform: capitalize;
+    color: #12263a;
+    padding-bottom: 0.6rem;
+}
+.product-detail p{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail ul{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.product-detail ul li{
+    margin: 0;
+    list-style: none;
+    background: url(shoes_images/checked.png) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.product-detail ul li span{
+    font-weight: 400;
+}
+.purchase-info{
+    margin: 1.5rem 0;
+    margin-top: 8rem;
+}
+.purchase-info .input_quanlity{
+    border: 1.5px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    padding: 8px 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+    background: #f2f2f2;
+}
+.purchase-info .btn_tru{
+    width: 40px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: #e63946;
+    color: #fff;
+    border-radius: 50px;
+}
+.purchase-info .btn_cong{
+    width: 40px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: #0066ff;
+    color: #fff;
+    border-radius: 50px;  
+}
+.purchase-info .btn_muahang{
+  width: 128px;
+  height: 42px;
+  border: none;
+  background: #52b788;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 20px;
+}
+.purchase-info .btn:first-of-type{
+    background: #256eff;
+}
+.purchase-info .btn:last-of-type{
+    background: #f64749;
+}
+.purchase-info .btn:hover{
+    opacity: 0.9;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+
+@media screen and (min-width: 992px){
+    .card_detail{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+}
+    .product_text_detail{
+      width: 80%;
+      margin: auto;
+      border: 1px solid #ccc;
+    }
+    .product_txt{
+      width: 300px;
+      height: 50px;
+      background: #5ba503;
+      margin-left: 9.5rem;
+    }
+    .product_txt h1{
+      padding-top: 5px;
+      padding-left: 15px;
+      color: #fff;
+      font-size: 30px;
+    }
+
+    /*comment*/
+    .comment{
+      width: 80%;
+      margin: auto;
+      margin-top: 15px;
+    }
+    .comment .media{
+      background: #fff;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      padding: 20px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+    }
+    .media img{
+      border-radius: 50%;
+      padding-right: 10px;
+    }
+    .media .list-unstyled{
+      display: flex;
+    }
+    .media .list-unstyled li{
+      margin-right: 20px;
+    }
+    </style>
+  </head>
+  <body>
+      <!---chi tiết sản phẩm-->
+      <div class = "card-wrapper">
+        <div class = "card_detail">
+          <!-- card left -->
+          <div class = "product-imgs">
+            <div class = "img-display">
+              <div class = "img-showcase">
+                <img src = "https://images.unsplash.com/photo-1533377748213-d222ac8eb9f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt = "shoe image">
+                <img src = "https://images.unsplash.com/photo-1528127269322-539801943592?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt = "shoe image">
+                <img src = "https://images.unsplash.com/photo-1521993117367-b7f70ccd029d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1140&q=80" alt = "shoe image">
+                <img src = "https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt = "shoe image">
+              </div>
+            </div>
+            <div class = "img-select">
+              <div class = "img-item">
+                <a href = "#" data-id = "1">
+                  <img src = "https://images.unsplash.com/photo-1533377748213-d222ac8eb9f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt = "shoe image">
+                </a>
+              </div>
+              <div class = "img-item">
+                <a href = "#" data-id = "2">
+                  <img src = "https://images.unsplash.com/photo-1528127269322-539801943592?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt = "shoe image">
+                </a>
+              </div>
+              <div class = "img-item">
+                <a href = "#" data-id = "3">
+                  <img src = "https://images.unsplash.com/photo-1521993117367-b7f70ccd029d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1140&q=80" alt = "shoe image">
+                </a>
+              </div>
+              <div class = "img-item">
+                <a href = "#" data-id = "4">
+                  <img src = "https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt = "shoe image">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class = "product-content">
+          <ol class="breadcrumb" style="margin-top: 20px;">
+              <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+              <li class="breadcrumb-item"><a href="#">Sản Phẩm</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Tên Sản Phẩm</li>
+          </ol>
+            <h2 class = "product-title">Tên sản phẩm</h2> 
+            <p>Sen Đá Thái (tên khoa học: Echeveria Blue Atoll) có nguồn gốc từ Mexico. Hiện nay cây rất được ưa chuộng trồng tại Việt Nam bởi đặc tính dễ thích nghi với môi trường và đặc điểm hình dáng thu hút…</p>
+            <div class = "product-price">
+              
+              <p class = "new-price">Giá: <span>0 VND</span></p>
+            </div>
+            <div class = "purchase-info">
+              <button data-decrease class="btn_tru">-</button>
+                <input data-value type="text" value="1" class="input_quanlity"/>
+                <button data-increase class="btn_cong">+</button>
+                <button class="btn_muahang"><a href="cart.html" style="color: #fff; text-decoration: none;">Mua Ngay</a></button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <!---nội dung chi tiết-->
+      <div class="product_txt">
+        <h1>Mô tả</h1>
+      </div>
+      <div class="product_text_detail">
+        <div class="text_detail">
+          <p style="padding: 20px;">Trong thực vật học, thực vật mọng nước, cũng được gọi là cây mọng nước hoặc đôi khi là thực vật béo, là những loài thực vật có một số thành phần dày và nhiều thịt hơn bình thường, thường để giữ nước khi sinh trưởng ở nơi điều kiện đất hay khí hậu khô cằn.</p>
+        </div>
+      </div>
+      <!---bình luận-->
+      <div class="bg-light p-2" style="width: 80%; margin: auto; margin-top: 1rem;">
+        <div class="d-flex flex-row align-items-start"><img class="rounded-circle" src="https://cdn1.vectorstock.com/i/1000x1000/82/55/anonymous-user-circle-icon-vector-18958255.jpg" width="50"><textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
+        <div class="mt-2 text-right">
+          <button class="btn btn-primary btn-sm shadow-none" type="button">Bình Luận</button>
+          <button class="btn btn-outline-primary btn-sm ml-1 shadow-none" type="button">Cancel</button></div>
+      </div>
+      <!--nôi dung bình luận-->
+      <div class="comment">
+        <div class="media">
+          <a class="pull-left" href="#"><img class="media-object" src="https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564400-account_81513.png" alt="" width="50px"></a>
+          <div class="media-body">
+              <h4 class="media-heading">Tâm Như</h4>
+              <p>Nội dung bình luận Như Y MH</p>
+              <ul class="list-unstyled list-inline media-detail pull-left">
+                  <li><i class='bx bx-calendar-alt'></i> 27/02/2014</li>
+              </ul>
+              <ul class="list-unstyled list-inline media-detail pull-right">
+                  <li class=""><a href="">Like</a></li>
+                  <li class=""><a href="">Trả lời</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="media">
+          <a class="pull-left" href="#"><img class="media-object" src="https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564400-account_81513.png" alt="" width="50px"></a>
+          <div class="media-body">
+              <h4 class="media-heading">Tâm Như</h4>
+              <p>Nội dung bình luận</p>
+              <ul class="list-unstyled list-inline media-detail pull-left">
+                  <li><i class='bx bx-calendar-alt'></i> 27/02/2014</li>
+              </ul>
+              <ul class="list-unstyled list-inline media-detail pull-right">
+                  <li class=""><a href="">Like</a></li>
+                  <li class=""><a href="">Trả lời</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <!---javascript-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!--link bootstrap-->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        const imgs = document.querySelectorAll('.img-select a');
+          const imgBtns = [...imgs];
+          let imgId = 1;
+  
+          imgBtns.forEach((imgItem) => {
+              imgItem.addEventListener('click', (event) => {
+                  event.preventDefault();
+                  imgId = imgItem.dataset.id;
+                  slideImage();
+              });
+          });
+  
+          function slideImage(){
+              const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+  
+              document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+          }
+  
+          window.addEventListener('resize', slideImage);
+      </script>
+      <script>
+        $(function() {
+        $('[data-decrease]').click(decrease);
+        $('[data-increase]').click(increase);
+        $('[data-value]').change(valueChange);
+      });
+        function decrease() {
+          var value = $(this).parent().find('[data-value]').val();
+          if(value > 1) {
+            value--;
+            $(this).parent().find('[data-value]').val(value);
+          }
+        }
+      function increase() {
+        var value = $(this).parent().find('[data-value]').val();
+        if(value < 100) {
+          value++;
+          $(this).parent().find('[data-value]').val(value);
+        }
+    }
+      </script>
+  </body>
+</html>
